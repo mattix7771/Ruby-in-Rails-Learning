@@ -1,8 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @friend %>
-
-<div>
+<div class="jumbotron"  style="padding: 35px; background-color:#e6e6e6;">
+  <br>
+  <h1 class="display-4"><%= @friend.first_name %> <%= @friend.last_name %></h1>
+  <p class="lead"><%= @friend.email %> | <%= @friend.phone %> | <%= @friend.twitter %></p>
+  <div>
   <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-light" %>
   <%= link_to "Back to friends", friends_path, class:"btn btn-light" %>
+  <br><br>
 </div>
+</div>
+
+
