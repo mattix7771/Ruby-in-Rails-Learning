@@ -9,6 +9,8 @@
     <th>Phone </th>
     <th>Twitter </th>
     <th></th>
+    <th></th>
+    <th></th>
   </tr>
  <% @friends.each do |friend| %>
   <tr>
@@ -17,12 +19,11 @@
     <td><%= friend.email%></td>
     <td><%= friend.phone%></td>
     <td><%= friend.twitter%></td>
-    <td><%= link_to "Show this friend", friend%></td>
-
+    <td><%= link_to "Show", friend%></td>
+    <td><%= link_to "Edit", edit_friend_path(friend) %></td>
+    <td><%= link_to "Delete", friend, method: :delete %></td>
   </tr>
   <% end %>
  </table>
 
-
-
-<%= link_to "New friend", new_friend_path %>
+<%= link_to "New friend", new_friend_path, class:"btn btn-light" %>
