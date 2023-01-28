@@ -19,7 +19,7 @@
     <td><%= friend.twitter%></td>
     <td><%= link_to "Show", friend%></td>
     <td><%= link_to "Edit", edit_friend_path(friend) %></td>
-    <td><%= link_to "Delete", friend, method: :delete %></td>
+    <td><%= button_to "Delete", friend, class:"btn btn-danger", method: :delete %></td>
   </tr>
   <% end %>
  </table>
