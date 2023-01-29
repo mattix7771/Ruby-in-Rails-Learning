@@ -6,21 +6,25 @@
     <th>Email </th>
     <th>Phone </th>
     <th>Twitter </th>
+    <th>User Id</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
  <% @friends.each do |friend| %>
-  <tr>
-    <td><%= friend.first_name%></td>
-    <td><%= friend.last_name%></td>
-    <td><%= friend.email%></td>
-    <td><%= friend.phone%></td>
-    <td><%= friend.twitter%></td>
-    <td><%= link_to "Show", friend%></td>
-    <td><%= link_to "Edit", edit_friend_path(friend) %></td>
-    <td><%= button_to "Delete", friend, class:"btn btn-danger", method: :delete %></td>
-  </tr>
+    <% if friend.user == current_user %>
+      <tr>
+        <td><%= friend.first_name%></td>
+        <td><%= friend.last_name%></td>
+        <td><%= friend.email%></td>
+        <td><%= friend.phone%></td>
+        <td><%= friend.twitter%></td>
+        <td><%= friend.user_id%></td>
+        <td><%= link_to "Show", friend%></td>
+        <td><%= link_to "Edit", edit_friend_path(friend) %></td>
+        <td><%= button_to "Delete", friend, class:"btn btn-danger", method: :delete %></td>
+      </tr>
+    <% end %>
   <% end %>
  </table>
 
