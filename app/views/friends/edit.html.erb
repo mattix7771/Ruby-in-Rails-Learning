@@ -5,6 +5,7 @@
 <br>
 
 <div>
-  <%= link_to "Show this friend", @friend, class:"btn btn-light" %>
-  <%= link_to "Back to friends", friends_path, class:"btn btn-light" %>
+  <%= link_to "Show this friend", @friend, class:"btn btn-secondary" %>
+  <%= button_to "Delete", @friend, class:"btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+  <%= link_to "Back to friends", friends_path, class:"btn btn-secondary" %>
 </div>

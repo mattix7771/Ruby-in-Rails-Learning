@@ -4,9 +4,10 @@
   <p class="lead"><%= @friend.email %> | <%= @friend.phone %> | <%= @friend.twitter %></p>
   <div>
   <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-light" %>
+  <%= button_to "Delete", @friend, class:"btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
   <%= link_to "Back to friends", friends_path, class:"btn btn-light" %>
   <br><br>
-</div>
+  </div>
 </div>
 
 
