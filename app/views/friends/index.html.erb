@@ -7,7 +7,6 @@
       <th>Email </th>
       <th>Phone </th>
       <th>Twitter </th>
-      <th>User Id</th>
       <th></th>
     </tr>
   <% @friends.each do |friend| %>
@@ -17,7 +16,6 @@
           <td><%= friend.email%></td>
           <td><%= friend.phone%></td>
           <td><%= friend.twitter%></td>
-          <td><%= friend.user_id%></td>
           <td><%= button_to "Delete", friend, class:"btn btn-outline-danger btn-sm", method: :delete, data: {confirm: "Are you sure?"} %></td>
         </tr>
       <% end %>
